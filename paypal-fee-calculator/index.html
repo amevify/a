@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple PayPal fee calculator</title>
+    <meta
+      name="title"
+      content="just 1  click Calculate how much (paypal) charges 2023"
+    />
+    <meta
+      name="description"
+      content="calculate (just 1
+      click) how much  paypal charges sending and receive money. calculate  without showing any ad. by abtahihasan.com"
+    />
+    <meta
+      name="keywords"
+      content="paypal fees for sending money, paypal fee for receiving money, paypal fees for sending money, abtahihasan, abtahihasan.com, abtahi hasan,"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Abtahi Hasan" />
+    <meta
+      property="og:title"
+      content="just"
+      1
+      click
+      Calculate
+      how
+      much
+      (Stripe
+      and
+      paypal)
+      charges
+      2023
+    />
+    <meta property="og:site_name" content="Abtahi" Hasan />
+    <meta property="og:url" content=https://www.abtahihasan.com>
+    <meta
+      property="og:description"
+      content="calculate (just 1
+      click) how much paypal charges sending and receive money. calculate  without showing any ad. by abtahihasan.com"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image"
+    content=https://drive.google.com/uc?export=download&id=1UQkc6Vr7SO_flz7pLw_ItjltKUCYxjZH>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NEV7973487"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-NEV7973487");
+    </script>
+
+    <!--all css code end here-->
+    <!----===== remixicon CSS ===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--All css code start here-->
+    <link
+      rel="stylesheet"
+      href="./../css/tools-css/paypal-fee-calculator.css"
+    />
+    <link rel="stylesheet" href="./../css/tool-freme-style.css" />
+    <!--All css code end here-->
+  </head>
+  <body>
+    <div class="bg">
+      <div class="bg-1"></div>
+      <div class="bg-2"></div>
+      <div class="bg-3"></div>
+      <div class="bg-4"></div>
+      <div class="bg-5"></div>
+    </div>
+    <nav class="sidebar">
+      <div class="logo">
+        <img
+          src="./../assets/logo/logo.svg"
+          alt="Abtahi Hasan Logo"
+          class="logo-icon"
+        />
+        <h1 class="logo-text">abtahiHasan</h1>
+      </div>
+      <section class="search">
+        <div class="search-box">
+          <input type="text" placeholder="Search here ..." /><i
+            class="ri-search-line"
+          ></i>
+        </div>
+      </section>
+      <ul class="navlinks">
+        <li class="show-search-pop-up"><i class="ri-search-line"></i></li>
+      </ul>
+    </nav>
+    <!-- main  -->
+    <main class="main">
+      <div class="top-bar">
+        <div class="manu-icon">
+          <img src="./../assets/nav-icon/menu-2-line.svg" alt="menu icon" />
+        </div>
+      </div>
+
+      <section class="main-content">
+        <!-- search  -->
+        <section class="search-pop-up">
+          <div class="pop-up-search-box">
+            <input type="text" placeholder="Search here ..." /><i
+              class="ri-search-line"
+            ></i>
+          </div>
+          <i class="ri-close-line"></i>
+        </section>
+        <section class="toolbody">
+          <!--PayPal Fee Calculator end-->
+          <div class="calculator">
+            <h2 class="tooltitle">PayPal Fee Calculator</h2>
+            <form id="form" onsubmit="calculateAmount(event);">
+              <input
+                type="number"
+                id="paypalFeeInput"
+                placeholder="Enter Your Amount"
+                autocomplete="off"
+                class="calculator-input"
+                required
+              />
+              <input type="submit" value="Calculate" id="CalculateBtn" />
+            </form>
+            <div id="result"></div>
+          </div>
+          <!--PayPal Fee Calculator end-->
+        </section>
+      </section>
+    </main>
+    <!-- js  -->
+    <script src="./../js/tools-js/paypal-fee-calculator.js"></script>
+    <script src="./../js/tool-api.js"></script>
+  </body>
+</html>
