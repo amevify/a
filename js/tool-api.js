@@ -16,7 +16,13 @@ const navData = {
         toolName: "stripe fee calculator",
         altData: "stripe fee calculator",
         url: "https://www.abtahihasan.com/stripe-fee-calculator"
-    }
+    },
+    tool4 : {
+      image: "./../assets/t-icons/privacy-policy-generator.svg",
+      toolName: "Privacy Policy Generator",
+      altData: "Privacy Policy Generator",
+      url: "https://www.abtahihasan.com/privacy-policy-generator"
+  }
 }
 
 // select nav 
@@ -51,3 +57,4 @@ let popUp = document.querySelector(".search-pop-up"),
   searchBoxClose.onclick = () => {
     popUp.classList.toggle("show");
   }
+
