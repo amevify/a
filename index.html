@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abtahihasan.com tool - 100% free</title>
+    <title>Abtahihasan.com tool</title>
+    <meta name="title" content="AbtahiHasan tools">
     <meta
       name="description"
       content="Easily use this very simple interface (100% Free)  web tools by abtahi hasan"
@@ -12,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="https://www.abtahihasan.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="100% Free SEO Tools - abtahiHasan.com" />
+    <meta property="og:title" content="100% Free Tools - abtahiHasan.com" />
     <meta
       property="og:description"
       content="You need effective SEO tools which are 100% free? Check out our Search Engine Optimization tools for checking backlinks, tracking keyword positions and more."
@@ -53,17 +54,27 @@
     />
   </head>
   <body>
+    <section class="preloader">
+      <div class="loader">
+        <div class="upper ball"></div>
+        <div class="right ball"></div>
+        <div class="lower ball"></div>
+        <div class="left ball"></div>
+      </div>
+    </section>
     <div class="bg">
     </div>
     <nav class="sidebar close">
-      <div class="logo">
-        <img
-          src="./assets/logo/logo.svg"
-          alt="Abtahi Hasan Logo"
-          class="logo-icon"
-        />
-        <h1 class="logo-text">abtahiHasan</h1>
-      </div>
+      <a href="https://www.abtahihasan.com">
+        <div class="logo">
+          <img
+            src="./assets/logo/logo.svg"
+            alt="Abtahi Hasan Logo"
+            class="logo-icon"
+          />
+          <h1 class="logo-text">abtahiHasan</h1>
+        </div>
+      </a>
       <ul class="navlinks">
         <li>
           <a href="#"
@@ -103,7 +114,7 @@
       <section class="main-content">
         <section class="search">
           <div class="search-box">
-            <input type="text" placeholder="Search here ..." /><i
+            <input type="text" id="search-input" placeholder="Search here ..." /><i
               class="ri-search-line"
             ></i>
           </div>

@@ -22,5 +22,11 @@ const toolCardData = {
         toolName: "Privacy Policy Generator",
         altData: "Privacy Policy Generator",
         url: "https://www.abtahihasan.com/privacy-policy-generator"
+    },
+    tool5 : {
+        image: "./assets/t-icons/meta-tag-generator.svg",
+        toolName: "Meta tag Generator",
+        altData: "Meta tag Generator",
+        url: "https://www.abtahihasan.com/meta-tag-generator"
     }
 }

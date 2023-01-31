@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meta Tag Generator</title>
+    <!-- favicon  -->
+    <link
+      rel="shortcut icon"
+      href="./../assets/logo/logo.svg"
+      type="image/x-icon"
+    />
+    <!----===== remixicon CSS ===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--All css code start here-->
+    <link rel="stylesheet" href="./../css/tool-freme-style.css" />
+    <link rel="stylesheet" href="./../css/tools-css/meta-tag-generator.css" />
+    <!--All css code end here-->
+  </head>
+  <body>
+    <section class="preloader">
+      <div class="loader">
+        <div class="upper ball"></div>
+        <div class="right ball"></div>
+        <div class="lower ball"></div>
+        <div class="left ball"></div>
+      </div>
+    </section>
+    <nav class="sidebar close">
+      <div class="logo">
+        <img
+          src="./../assets/logo/logo.svg"
+          alt="Abtahi Hasan Logo"
+          class="logo-icon"
+        />
+        <h1 class="logo-text">abtahiHasan</h1>
+      </div>
+      <section class="search">
+        <div class="search-box">
+          <input type="text" placeholder="Search here ..." /><i
+            class="ri-search-line"
+          ></i>
+        </div>
+      </section>
+      <ul class="navlinks">
+        <li class="show-search-pop-up"><i class="ri-search-line"></i></li>
+      </ul>
+    </nav>
+    <!-- main  -->
+    <main class="main full">
+      <div class="top-bar">
+        <div class="manu-icon">
+          <img src="./../assets/nav-icon/menu-2-line.svg" alt="menu icon" />
+        </div>
+      </div>
+
+      <section class="main-content">
+        <!-- search  -->
+        <section class="search-pop-up">
+          <div class="pop-up-search-box">
+            <input type="text" placeholder="Search here ..." /><i
+              class="ri-search-line"
+            ></i>
+          </div>
+          <i class="ri-close-line"></i>
+        </section>
+        <section class="toolbody">
+          <h1>Free Meta Tag Generator</h1>
+          <form id="form">
+            <div class="form-control">
+              <label for="title"
+                >Site Title (Characters left: 70) <span>*</span></label
+              >
+              <input
+                type="text"
+                id="title"
+                placeholder="Title must be within 70 Characters"
+                required
+              />
+            </div>
+            <!-- tag and description -->
+            <div class="tag-des">
+              <div class="form-control">
+                <label for="description">Site Description<span>*</span></label>
+                <textarea
+                  id="description"
+                  placeholder="Description must be within 150 Characters"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-control">
+                <label for="tags"
+                  >Site Keywords (use commas) <span>*</span></label
+                >
+                <textarea
+                  name=""
+                  id="tags"
+                  placeholder="example:- keyword1, keyword2, keyword3"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <h3>optional:</h3>
+            <div id="selects">
+              <div class="form-control">
+                <label for="index-allow"
+                  >Allow robots to index your website?</label
+                >
+                <select
+                  name="robots-tag"
+                  class="custom-select"
+                  id="index-allow"
+                >
+                  <option selected value="index">Yes</option>
+                  <option value="noindex">No</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="link-follow-allow"
+                  >Allow robots to follow all links?</label
+                >
+                <select
+                  name="robots-allow"
+                  class="custom-select"
+                  id="link-follow-allow"
+                >
+                  <option selected value="follow">Yes</option>
+                  <option value="nofollow">No</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="content-type"
+                  >What type of content will your site display?</label
+                >
+                <select
+                  name="content-type"
+                  class="custom-select"
+                  id="content-type"
+                >
+                  <option selected value="UTF-8">UTF-8</option>
+                  <option value="UTF-16">UTF-16</option>
+                  <option value="ISO-8859-1">ISO-8859-1</option>
+                  <option value="WINDOWS-1252">WINDOWS-1252</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="language"
+                  >What is your site primary language?</label
+                >
+                <select name="language" class="custom-select" id="language">
+                  <option selected value="English">English</option>
+                  <option value="French">french</option>
+                  <option value="Spanish">Spanish</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="Russian">Russian</option>
+                  <option value="Arabic">Arabic</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Korean">Korean</option>
+                  <option value="Hindi">Hindi</option>
+                  <option value="Portuguese">Portuguese</option>
+                  <option value="N/A">No Language Tag</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-control author">
+              <label for="author">Author:</label>
+              <input type="text" id="author" placeholder="Author name" />
+            </div>
+            <button type="submit" id="generate">Generate Meta Tag</button>
+            <h3>Result:</h3>
+            <div class="result">
+              <textarea id="print-code" readonly></textarea>
+              <div id="copy-btn">
+                <img src="./../assets/icon/copy-solid.svg" alt="copy btn" />
+              </div>
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+    <!-- js  -->
+    <script src="./../js/tools-js/meta-tag-generator.js"></script>
+    <script src="./../js/tool-api.js"></script>
+  </body>
+</html>

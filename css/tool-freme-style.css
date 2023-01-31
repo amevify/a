@@ -24,7 +24,7 @@ a {
 :root {
   --white: #fff;
   --bg: #ffffff11;
-  --theme-color:#03002e;
+  --theme-color: #03002e;
   --gray: #2d2d22;
   --btn-color: #7286d3;
   --card-bg: #00000025;
@@ -35,15 +35,99 @@ a {
   /* transition  */
   --transition: 0.3s;
 }
-.bg {
+body {
+  background-color: var(--theme-color);
+}
+/* loading animation start here  */
+.preloader {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--theme-color);
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  background-color: var(--theme-color);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.loader {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  animation: rotate 0.1s infinite;
+}
+.ball {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.upper {
+  left: 0;
+  top: -22px;
+  background: #2da2ff;
+  animation: upper 1s linear infinite;
+}
+@keyframes upper {
+  50% {
+    top: 22px;
+  }
+  100% {
+    top: 22px;
+  }
+}
+.right {
+  right: -22px;
+  top: 0;
+  background: #ff337a;
+  animation: right 1s linear infinite;
+}
+@keyframes right {
+  50% {
+    right: 22px;
+  }
+  100% {
+    right: 22px;
+  }
+}
+.lower {
+  bottom: -22px;
+  left: 0;
+  background: #ffff00;
+  animation: lower 1s linear infinite;
+}
+@keyframes lower {
+  50% {
+    bottom: 22px;
+  }
+  100% {
+    bottom: 22px;
+  }
+}
+.left {
+  left: -22px;
+  top: 0;
+  background: #00ff00;
+  animation: left 1s linear infinite;
+}
+@keyframes left {
+  50% {
+    left: 22px;
+  }
+  100% {
+    left: 22px;
+  }
+}
+
+/* loading animation end here  */
+/* width */
+::-webkit-scrollbar {
+  display: none;
+}
+
 .sidebar {
   width: 240px;
   background: var(--bg);
@@ -58,8 +142,10 @@ a {
   overflow: hidden;
   transition: var(--transition);
 }
+
 .sidebar .logo {
   display: flex;
+  flex-direction: row;
   gap: 15px;
   margin-left: 10px;
   margin-top: 10px;
@@ -67,8 +153,10 @@ a {
 .sidebar .logo-icon {
   width: 35px;
 }
+
 .logo-text {
   color: var(--white);
+  white-space: nowrap;
 }
 .sidebar .navlinks {
   margin-top: 30px;
@@ -155,13 +243,15 @@ a {
 }
 .toolbody {
   padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
   width: 100%;
   margin: auto;
-  min-height: 90vh;
-  background: var(--card-bg);
+  min-height: 100vh;
   backdrop-filter: blur(30px);
-  /* border: 0.04px solid var(--white); */
   color: white;
+  overflow-x: hidden;
 }
 .search {
   margin-top: 60px;
@@ -227,7 +317,6 @@ a {
 }
 .search-pop-up > i:hover {
   background: var(--hover-red);
-  
 }
 .pop-up-search-box {
   width: 60%;
@@ -268,6 +357,10 @@ a {
   .main {
     width: 100%;
     left: 0;
+  }
+  .toolbody {
+    display: flex;
+    justify-content: center;
   }
   .pop-up-search-box {
     width: 100%;

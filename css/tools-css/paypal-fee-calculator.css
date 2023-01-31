@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .tooltitle {
   margin: 30px;
@@ -15,7 +16,8 @@
 }
 .calculator-input {
   max-width: 500px;
-  width: 100%;
+  width: 93%;
+  margin: 10px auto;
   border: 1px solid var(--white);
   background: transparent;
   height: 30px;
@@ -36,11 +38,11 @@
   justify-content: center;
   margin-top: 30px;
 }
-.result {
+#result {
   display: flex;
   justify-content: center;
 }
-.result1 {
+.result {
   padding: 10px;
 }
 
@@ -49,7 +51,7 @@
     flex-wrap: wrap;
   }
   .result {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
   .header-content {
@@ -57,6 +59,10 @@
   }
   .toolbody {
     margin: 10px;
+  }
+  #CalculateBtn {
+    width: 93%;
+    margin: 5px auto;
   }
 }
 

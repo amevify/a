@@ -3,9 +3,6 @@
   --red: #a12121;
   --gray-white: #f7f2f2;
 }
-body {
-  background-color: var(--sky-blue);
-}
 h1 {
   text-align: center;
   font: 50px;

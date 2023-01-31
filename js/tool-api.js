@@ -19,19 +19,26 @@ const navData = {
     },
     tool4 : {
       image: "./../assets/t-icons/privacy-policy-generator.svg",
-      toolName: "Privacy Policy Generator",
+      toolName: "Privacy Generator",
       altData: "Privacy Policy Generator",
       url: "https://www.abtahihasan.com/privacy-policy-generator"
-  }
+  },
+  tool5 : {
+    image: "./../assets/t-icons/meta-tag-generator.svg",
+    toolName: "Meta tag Generator",
+    altData: "Meta tag Generator",
+    url: "https://www.abtahihasan.com/meta-tag-generator"
+}
 }
 
 // select nav 
 let navlinks = document.querySelector(".navlinks");
 for(let x in navData) {
-    let toolsListh = document.createElement("li");    
+    let toolsListh = document.createElement("li");   
+    toolsListh.classList.add("list");
     toolsListh.innerHTML = `
     <a href="${navData[x].url}"
-            ><img src="${navData[x].image}" alt="${navData[x].altData}" /><span
+            ><img src="${navData[x].image}" alt="${navData[x].altData}" /><span class="tool-name"
               >${navData[x].toolName}</span
             ></a
     >
@@ -58,3 +65,33 @@ let popUp = document.querySelector(".search-pop-up"),
     popUp.classList.toggle("show");
   }
 
+// search engine
+
+let searchInputSide = document.querySelector(".search-box > input") ;
+let searchInputPop= document.querySelector(".pop-up-search-box > input");
+function searchEngine(inputs) {
+  let input = inputs.value.toUpperCase(); 
+  list = document.querySelectorAll(".list");
+  for(let i = 0; i < list.length; i++) {
+    let tName = list[i].querySelector("span"),
+     nameValue = (tName.textContent || tName.innerText).toUpperCase();
+     if(nameValue.indexOf(input) > -1) {
+      list[i].style.display = "";
+     } else {
+      list[i].style.display = "none";
+     }
+  }
+}
+
+searchInputSide.onkeyup = function (){
+  searchEngine(this);
+}
+searchInputPop.onkeyup = function (){
+  searchEngine(this);
+}
+
+// preloader 
+window.onload = () => {
+  let preloader = document.querySelector(".preloader");
+  preloader.style.display = "none";
+}

@@ -1,8 +1,18 @@
-.toolbody {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.toolbody {  
   width: 100%;
+  min-height: 100vh !important; 
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.tool-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.calculator {
+  margin: 9px;
 }
 .tooltitle {
   margin: 30px;
@@ -16,7 +26,8 @@
 }
 .calculator-input {
   max-width: 500px;
-  width: 100%;
+  width: 95%;
+  margin: 10px auto;
   border: 1px solid var(--white);
   background: transparent;
   height: 30px;
@@ -25,10 +36,10 @@
   padding: 18px 20px;
   border-radius: 10px;
 }
-#CalculateBtn {
+#calculateBtn {
   background: var(--btn-color);
   color: var(--white);
-  padding: 10px;
+  padding: 10px 15px;
   border: none;
   border-radius: 12px;
 }
@@ -37,17 +48,26 @@
   justify-content: center;
   margin-top: 30px;
 }
-.result {
+#result {
   display: flex;
   justify-content: center;
+  padding: 5px;
+  padding: 0 10px;
 }
-.result1 {
+.result {
   padding: 10px;
 }
 
 @media screen and (max-width: 600px) {
   .result-container {
     flex-wrap: wrap;
+  }
+  #form {
+    flex-direction: column;
+  }
+  #calculateBtn {
+    width: 95%;
+    margin: 5px auto;
   }
   .result {
     width: 80%;
@@ -59,10 +79,6 @@
   .toolbody {
     margin: 10px;
   }
+ 
 }
 
-@media screen and (max-width: 480px) {
-  #form {
-    flex-direction: column;
-  }
-}
