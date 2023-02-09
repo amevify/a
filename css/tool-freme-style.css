@@ -292,7 +292,8 @@ body {
   background: var(--card-bg);
   position: absolute;
   padding: 100px 20px;
-  width: 95%;
+  max-width: 1100px;
+  width: 98%;
   left: 50%;
   top: 20%;
   z-index: 77777;
@@ -341,7 +342,7 @@ body {
   display: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 700px) {
   .sidebar {
     width: 50px;
   }
@@ -350,6 +351,11 @@ body {
   }
   .sidebar.close {
     width: 0;
+  }
+  .sidebar .show-search-pop-up {
+    display: block;
+    font-size: 25px;
+    color: var(--white);
   }
   .top-bar {
     width: 100%;

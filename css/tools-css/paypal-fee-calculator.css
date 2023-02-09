@@ -2,7 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 1200px;
+  width: 100px;
+  overflow: hidden;
+}
+.calculator {
+  max-width: 1100px;
+  width: 95%;
+  position: a;
 }
 .tooltitle {
   margin: 30px;
@@ -13,6 +20,9 @@
   display: flex;
   gap: 10px;
   flex-direction: row;
+}
+.calculator {
+  max-width: 1200px;
 }
 .calculator-input {
   max-width: 500px;
@@ -26,7 +36,7 @@
   padding: 18px 20px;
   border-radius: 10px;
 }
-#CalculateBtn {
+#calculateBtn {
   background: var(--btn-color);
   color: var(--white);
   padding: 10px;
@@ -37,22 +47,42 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  width: 100%;
 }
 #result {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .result {
   padding: 10px;
+  margin: 10px;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
+  .calculator {
+    width: 98%;
+  }
+  .calculator-input {
+    max-width: none;
+    width: 99%;
+  }
+  #form {
+    flex-direction: column;
+    width: 100%;
+  }
+  #form input {
+    width: 98%;
+  } 
   .result-container {
-    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 250px;
   }
   .result {
-    width: 90%;
+    width: 98%;
     margin: auto;
+    margin-top: 10px;
   }
   .header-content {
     margin: 0 15px;
@@ -60,14 +90,8 @@
   .toolbody {
     margin: 10px;
   }
-  #CalculateBtn {
+  #calculateBtn {
     width: 93%;
     margin: 5px auto;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #form {
-    flex-direction: column;
   }
 }

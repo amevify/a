@@ -1,18 +1,11 @@
-.toolbody {  
-  width: 100%;
-  min-height: 100vh !important; 
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
+body, .main {
+  overflow-x: hidden;
 }
 .tool-container {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.calculator {
-  margin: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .tooltitle {
   margin: 30px;
@@ -24,9 +17,12 @@
   gap: 10px;
   flex-direction: row;
 }
+.calculator {
+  max-width: 1200px;
+}
 .calculator-input {
   max-width: 500px;
-  width: 95%;
+  width: 93%;
   margin: 10px auto;
   border: 1px solid var(--white);
   background: transparent;
@@ -39,7 +35,7 @@
 #calculateBtn {
   background: var(--btn-color);
   color: var(--white);
-  padding: 10px 15px;
+  padding: 10px;
   border: none;
   border-radius: 12px;
 }
@@ -47,38 +43,55 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  width: 100%;
 }
 #result {
   display: flex;
   justify-content: center;
-  padding: 5px;
-  padding: 0 10px;
+  width: 100%;
 }
 .result {
   padding: 10px;
+  margin: 10px;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
-  .result-container {
-    flex-wrap: wrap;
+@media screen and (max-width: 700px) {
+  .calculator {
+    width: 100%;
+  }
+  .calculator-input {
+    max-width: none;
+    width: 99%;
   }
   #form {
     flex-direction: column;
+    width: 100%;
   }
-  #calculateBtn {
-    width: 95%;
-    margin: 5px auto;
+  #form input {
+    width: 98%;
   }
   .result {
-    width: 80%;
+    width: 98%;
     margin: auto;
+    margin-top: 10px;
+  }
+  .result-container {
+    flex-direction: column;
+    min-width: 250px;
   }
   .header-content {
     margin: 0 15px;
   }
   .toolbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin: 10px;
   }
- 
+  #calculateBtn {
+    width: 93%;
+    margin: 5px auto;
+  }
 }
-

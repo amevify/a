@@ -1,8 +1,4 @@
 @font-face {
-  font-family: poppins;
-  src: url(./../static/fonts/Poppins-Regular.ttf);
-}
-@font-face {
   font-family: maven;
   src: url(./../static/fonts/MavenPro-Regular.ttf);
 }
@@ -10,7 +6,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: poppins;
+  font-family: maven;
+}
+html {
+  scroll-behavior: smooth;
 }
 /* common codes  start*/
 ul {
@@ -295,6 +294,14 @@ body {
 .card h2 {
   font-size: 20px;
   margin-top: 15px;
+  text-align: center;
+}
+.not-match-keyword {
+  width: 100%;
+}
+.keyword-not-match {
+  color: var(--white);
+  margin-top: 20px;
   text-align: center;
 }
 
