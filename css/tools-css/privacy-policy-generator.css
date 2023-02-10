@@ -52,7 +52,7 @@ h1 {
 .form-control i {
   position: absolute;
   right: 22px;
-  top: 73px;
+  top: 60px;
 }
 .form-control i.ri-checkbox-circle-fill {
   color: var(--green);
@@ -148,4 +148,11 @@ h1 {
 /* Handle on hover */
 #result::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+
+@media  (max-width: 700px) {
+  #form {
+    padding: 10px;
+  }
 }

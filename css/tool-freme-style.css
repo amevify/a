@@ -361,8 +361,7 @@ body {
     left: 0;
   }
   .toolbody {
-    display: flex;
-    justify-content: center;
+    margin: auto;
   }
   .pop-up-search-box {
     width: 100%;
