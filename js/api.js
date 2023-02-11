@@ -44,4 +44,13 @@ export const toolCardData = [
         tag: "5",
         url: "https://www.abtahihasan.com/meta-tag-generator"
     },
+    {   
+        id: 5,
+        image: "./assets/t-icons/about-us-page-generator.svg",
+        toolName: "About Us page Generator",
+        altData: "About Us page Generator",
+        description: "6",
+        tag: "6",
+        url: "https://www.abtahihasan.com/about-us-page-generator"
+    },
 ]

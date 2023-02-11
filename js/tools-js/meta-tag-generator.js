@@ -50,8 +50,6 @@ const metaTagGenerator = (event) => {
 form.addEventListener("submit", metaTagGenerator);
 
 // code copy function 
-
 copyBtn.onclick = () => {
-    result.select();
-    document.execCommand("copy");
+    navigator.clipboard.writeText(result.value); 
 }

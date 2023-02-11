@@ -138,6 +138,5 @@ function printCode() {
 // copy code btn 
 let copyBtn = document.getElementById("copy-data");
 copyBtn.onclick = () => {
-    result.select();
-    document.execCommand("copy");
+    navigator.clipboard.writeText(result.value); 
 }

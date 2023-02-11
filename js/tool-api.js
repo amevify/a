@@ -28,7 +28,13 @@ const navData = {
     toolName: "Meta tag Generator",
     altData: "Meta tag Generator",
     url: "https://www.abtahihasan.com/meta-tag-generator"
-}
+},
+  tool6 : {   
+        image: "./../assets/t-icons/about-us-page-generator.svg",
+        toolName: "About Us page Generator",
+        altData: "About Us page Generator",
+        url: "https://www.abtahihasan.com/about-us-page-generator"
+    },
 }
 
 // select nav 
