@@ -1,3 +1,4 @@
+import { copyCodeButton } from "./../components/copy-btn.js";
 // select Elements 
 const form = document.getElementById("form"),
     title = document.getElementById("title"),
@@ -29,9 +30,8 @@ const printCode = () => {
         indexAllowVal = indexAllow.value,
         allowLink = followLink.value,
         contentTypeVal = contentType.value.toLowerCase(), 
-        languageVal = language.value;
+        languageVal = language.value,
         authorName = isName(author);
-        console.log(authorName);
     result.value = `
     <meta name="title" content="${titleVal}">
     <meta name="description" content="${descriptionVal}">
@@ -50,6 +50,4 @@ const metaTagGenerator = (event) => {
 form.addEventListener("submit", metaTagGenerator);
 
 // code copy function 
-copyBtn.onclick = () => {
-    navigator.clipboard.writeText(result.value); 
-}
+copyCodeButton(result);

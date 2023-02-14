@@ -1,0 +1,9 @@
+#copy-btn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background: transparent;
+    top: 40px;
+    right: 20px;
+    cursor: pointer;
+}

@@ -1,3 +1,6 @@
+import { copyCodeButton } from "./../components/copy-btn.js";
+import { errMessage } from "./../components/set-message.js";
+import { successMessage } from "./../components/set-message.js";
 const form = document.getElementById("form"),
     websiteName = document.getElementById("website-name"),
     websiteTypeInput = document.getElementById("websiteType"),
@@ -33,20 +36,7 @@ const inputValidator = () => {
 
 }
     
-//  error massage 
-function errMessage (input, message) {
-    let fromControl = input.parentElement;
-    let small = fromControl.querySelector("small");
-    small.innerText = message;
-    fromControl.className = "form-control error"
-}
-// seccess message 
-function successMessage(input) {
-    let fromControl = input.parentElement;
-    let small = fromControl.querySelector("small");
-    small.style.display = "none";
-    fromControl.className = "form-control success"
-}
+
 
 // code generator
 
@@ -84,8 +74,5 @@ form.onsubmit = (event) => {
     
 }
 
-// copy code btn 
-let copyBtn = document.getElementById("copy-data");
-copyBtn.onclick = () => {
-    navigator.clipboard.writeText(result.value); 
-}
+
+copyCodeButton(result);

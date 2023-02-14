@@ -1,3 +1,4 @@
+@import "./../components/copy-btn.css";
 :root {
     --red: #e60303;
 }
@@ -81,7 +82,7 @@ h3{
 .result {
     position: relative;
 }
-#copy-btn {
+/* #copy-btn {
     position: absolute;
     top: 30px;
     right: 10px;
@@ -93,7 +94,7 @@ h3{
     justify-content: center;
     align-items: center;
     border: 1px solid var(--white);
-}
+} */
 #copy-btn img{
     width: 18px;
     height: 18px;

@@ -1,3 +1,4 @@
+import { copyCodeButton } from "./../components/copy-btn.js";
 const form = document.getElementById("form"),
  websiteName = document.getElementById("website-name"),
  emailInput = document.getElementById("email"),
@@ -136,7 +137,4 @@ function printCode() {
 }
 
 // copy code btn 
-let copyBtn = document.getElementById("copy-data");
-copyBtn.onclick = () => {
-    navigator.clipboard.writeText(result.value); 
-}
+copyCodeButton(result);

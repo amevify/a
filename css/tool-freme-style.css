@@ -249,6 +249,9 @@ body {
   color: white;
   overflow-x: hidden;
 }
+.copy-btn {
+  cursor: pointer;
+}
 .search {
   margin-top: 60px;
   width: 100%;
@@ -295,9 +298,11 @@ body {
   z-index: 77777;
   display: none;
   backdrop-filter: blur(10px);
-  transform: translateX(100000px);
-  transition: tranform 0.2s;
   border: 2px solid var(--white);
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .search-pop-up.show {
   display: block;
@@ -337,6 +342,7 @@ body {
 .sidebar.close .search {
   display: none;
 }
+
 
 @media (max-width: 700px) {
   .sidebar {
