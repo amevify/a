@@ -44,7 +44,7 @@ for(let x in navData) {
     toolsListh.classList.add("list");
     toolsListh.innerHTML = `
     <a href="${navData[x].url}"
-            ><img src="${navData[x].image}" alt="${navData[x].altData}" /><span class="tool-name"
+            ><img src="${navData[x].image}" alt="${navData[x].altData}" /><span class="tool-name text-white"
               >${navData[x].toolName}</span
             ></a
     >
